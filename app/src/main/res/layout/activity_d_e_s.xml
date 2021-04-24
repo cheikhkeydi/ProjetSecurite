@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DES"
+    android:orientation="vertical"
+    android:layout_margin="8dp">
+
+    <EditText
+        android:id="@+id/textClair"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Texte claire"
+        />
+
+    <EditText
+        android:id="@+id/textkey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Key"
+        android:layout_below="@id/textCrypted"
+        />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/cryptBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_below="@id/textkey"
+            android:layout_margin="5dp"
+            android:text="Crypter"
+            android:onClick="encodeDES"
+            />
+
+        <Button
+            android:id="@+id/decryptBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_below="@id/textkey"
+            android:layout_toRightOf="@id/cryptBtn"
+            android:layout_margin="5dp"
+            android:text="Decrypter"
+            android:onClick="decodeDES"
+            />
+
+        <Button
+            android:id="@+id/returnBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_below="@id/textkey"
+            android:layout_toRightOf="@id/decryptBtn"
+            android:layout_margin="5dp"
+            android:text="Acceuil"
+            android:onClick="endActivity" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="516dp"
+        android:orientation="vertical"
+        android:background="@color/purple_700">
+
+        <TextView
+            android:layout_margin="12dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/textCrypted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="24dp"
+            android:layout_below="@id/textClair"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
